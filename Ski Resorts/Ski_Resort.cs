@@ -24,14 +24,6 @@ namespace Ski_Resorts
             set { _country = value; }
         }
 
-        private string _nearby_cities;
-
-        public string Nearby_Cities
-        {
-            get { return _nearby_cities; }
-            set { _nearby_cities = value; }
-        }
-
         private int _highest_peak;
 
         public int _Highest_Peak
