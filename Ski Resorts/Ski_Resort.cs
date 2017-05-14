@@ -32,52 +32,12 @@ namespace Ski_Resorts
             set { _highest_peak = value; }
         }
 
-        private int _heigh_difference;
-
-        public int Heigh_Difference
-        {
-            get { return _heigh_difference; }
-            set { _heigh_difference = value; }
-        }
-
         private int _km;
 
         public int Km
         {
             get { return _km; }
             set { _km = value; }
-        }
-
-        private int _km_green;
-
-        public int Km_Green
-        {
-            get { return _km_green; }
-            set { _km_green = value; }
-        }
-
-        private int _km_blue;
-
-        public int Km_Blue
-        {
-            get { return _km_blue; }
-            set { _km_blue = value; }
-        }
-
-        private int _km_red;
-
-        public int Km_red
-        {
-            get { return _km_red; }
-            set { _km_red = value; }
-        }
-
-        private int _km_black;
-
-        public int Km_Black
-        {
-            get { return _km_black; }
-            set { _km_black = value; }
         }
 
         private int _the_longest_slope;
@@ -102,6 +62,14 @@ namespace Ski_Resorts
         {
             get { return _snowparks; }
             set { _snowparks = value; }
+        }
+
+        private int _rink;
+
+        public int Rink
+        {
+            get { return _rink; }
+            set { _rink = value; }
         }
 
         private int _skipass;
