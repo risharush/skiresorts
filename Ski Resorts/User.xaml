@@ -23,7 +23,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <CheckBox x:Name="checkBox" FontSize="15" Content="Сноупарк" Margin="10,6" Grid.Row="4" Grid.Column="1"/>
-        <CheckBox x:Name="checkBox1" FontSize="15" Content="Каток" Margin="0,6.333,9.667,6" Grid.Row="5" Grid.Column="1" Checked="checkBox1_Checked" HorizontalAlignment="Right" Width="154"/>
+        <CheckBox x:Name="checkBox1" FontSize="15" Content="Каток" Margin="10,6" Grid.Row="5" Grid.Column="1"/>
         <ComboBox x:Name="comboBox" Grid.Row="3" Grid.Column="1" Margin="10,6">
             <TextBlock>Любая</TextBlock>
             <TextBlock>Австрия</TextBlock>

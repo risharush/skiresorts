@@ -23,5 +23,12 @@ namespace Ski_Resorts
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            AdminAdd wnd = new AdminAdd();
+            wnd.Show();
+            this.Close();
+        }
     }
 }

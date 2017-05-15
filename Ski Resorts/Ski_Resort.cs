@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Ski_Resorts
 {
-    class Ski_Resort
+    [Serializable]
+    public class Ski_Resort
     {
         private string _name;
 
@@ -26,7 +27,7 @@ namespace Ski_Resorts
 
         private int _highest_peak;
 
-        public int _Highest_Peak
+        public int Highest_Peak
         {
             get { return _highest_peak; }
             set { _highest_peak = value; }
@@ -40,12 +41,12 @@ namespace Ski_Resorts
             set { _km = value; }
         }
 
-        private int _the_longest_slope;
+        private int _longest_slope;
 
-        public int The_Longest_Slope
+        public int Longest_Slope
         {
-            get { return _the_longest_slope; }
-            set { _the_longest_slope = value; }
+            get { return _longest_slope; }
+            set { _longest_slope = value; }
         }
 
         private int _ski_lifts;
@@ -78,6 +79,24 @@ namespace Ski_Resorts
         {
             get { return _skipass; }
             set { _skipass = value; }
+        }
+
+        public Ski_Resort(string name, string country, int highest_peak, int km, int longestslope, int ski_lifts, int snowparks, int rink, int skipass)
+        {
+            Name = name;
+            Country = country;
+            Highest_Peak = highest_peak;
+            Km = km;
+            Longest_Slope = longestslope;
+            Ski_Lifts = ski_lifts;
+            Snowparks = snowparks;
+            Rink = rink;
+            Skipass = skipass;
+        }
+
+        public Ski_Resort()
+        {
+
         }
     }
 }

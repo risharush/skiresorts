@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Ski_Resort xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>sadf</Name>
+  <Country>Норвегия</Country>
+  <Highest_Peak>234</Highest_Peak>
+  <Km>876</Km>
+  <Longest_Slope>876</Longest_Slope>
+  <Ski_Lifts>86</Ski_Lifts>
+  <Snowparks>8</Snowparks>
+  <Rink>1</Rink>
+  <Skipass>78</Skipass>
+</Ski_Resort>

@@ -22,7 +22,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Button x:Name="button" FontSize="16" Content="Пользователь" Margin="21,0,87.667,0.333" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3" Height="56" VerticalAlignment="Bottom" Click="button_Click"/>
-        <Button x:Name="button1" FontSize="16" Content="Администратор" Grid.Column="3" Margin="0" Grid.Row="2" Grid.RowSpan="2"/>
+        <Button x:Name="button1" FontSize="16" Content="Администратор" Grid.Column="3" Margin="0" Grid.Row="2" Grid.RowSpan="2" Click="button1_Click"/>
         <Label x:Name="label" Content="Кто Вы?" FontSize="75" HorizontalAlignment="Center" Grid.Column="1" Margin="0" Grid.Row="1" Grid.ColumnSpan="3"/>
 
     </Grid>
