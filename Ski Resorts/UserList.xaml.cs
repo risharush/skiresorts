@@ -10,20 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.IO;
-using System.Xml.Serialization;
 
 namespace Ski_Resorts
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для UserList.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UserList : Window
     {
-       
-        public MainWindow()
+        public UserList()
         {
             InitializeComponent();
         }
@@ -31,13 +27,6 @@ namespace Ski_Resorts
         private void button_Click(object sender, RoutedEventArgs e)
         {
             User wnd = new User();
-            wnd.Show();
-            this.Close();
-        }
-
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            Admin wnd = new Admin();
             wnd.Show();
             this.Close();
         }

@@ -22,6 +22,9 @@ namespace Ski_Resorts
     /// </summary>
     public partial class AdminAdd : Window
     {
+        public ListOfResorts lr = null;
+        public string file = "../../allresorts.xml";
+
         public AdminAdd()
         {
             InitializeComponent();
@@ -34,17 +37,17 @@ namespace Ski_Resorts
             {
                 rink = 1;
             }
-            else
-            {
-                rink = 0;
-            }
-            Ski_Resort sr = new Ski_Resort(textBoxName.Text, comboBoxCountry.Text, int.Parse(textBoxPeak.Text), int.Parse(textBoxKm.Text), int.Parse(textBoxSlope.Text), int.Parse(textBoxLifts.Text), int.Parse(textBoxSnowparks.Text), rink, int.Parse(textBoxSkipass.Text));
             
-            XmlSerializer ser = new XmlSerializer(typeof(Ski_Resort));
-            using (FileStream fs = new FileStream("../../allresorts.xml", FileMode.OpenOrCreate))
-            {
-                ser.Serialize(fs, sr);
-            }
+                lr = Serialization.Deserialize(lr);
+
+            Ski_Resort sr = new Ski_Resort(textBoxName.Text, comboBoxCountry.Text, int.Parse(textBoxPeak.Text), int.Parse(textBoxKm.Text), int.Parse(textBoxSlope.Text), int.Parse(textBoxLifts.Text), int.Parse(textBoxSnowparks.Text), rink, int.Parse(textBoxSkipass.Text));
+           
+            lr.Res.Add(sr);
+            Serialization.Serialize(lr);
+
+            Admin wnd = new Admin();
+            wnd.Show();
+            this.Close();
         }
 
        

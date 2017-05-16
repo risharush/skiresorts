@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Ski_Resorts
 {
@@ -19,9 +21,19 @@ namespace Ski_Resorts
     /// </summary>
     public partial class Admin : Window
     {
+        public ListOfResorts lr = null;
+        public string file = "../../allresorts.xml";
         public Admin()
         {
             InitializeComponent();
+            
+            lr = Serialization.Deserialize(lr);
+                foreach (var item in lr.Res)
+                {
+                    string str = item.Name + ' ' + item.Country + ' ' + item.Highest_Peak + ' ' + item.Km + ' ' + item.Longest_Slope + ' ' + item.Ski_Lifts + ' ' + item.Snowparks + ' ' + item.Rink + ' ' + item.Skipass;
+                    listView.Items.Add(str);
+                }
+
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

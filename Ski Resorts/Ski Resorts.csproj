@@ -61,9 +61,14 @@
     <Compile Include="AdminAdd.xaml.cs">
       <DependentUpon>AdminAdd.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListOfResorts.cs" />
+    <Compile Include="Serialization.cs" />
     <Compile Include="Ski_Resort.cs" />
     <Compile Include="User.xaml.cs">
       <DependentUpon>User.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserList.xaml.cs">
+      <DependentUpon>UserList.xaml</DependentUpon>
     </Compile>
     <Page Include="Admin.xaml">
       <SubType>Designer</SubType>
@@ -86,6 +91,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="User.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
