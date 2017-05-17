@@ -10,36 +10,32 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.IO;
-using System.Xml.Serialization;
 
 namespace Ski_Resorts
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Password.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Password : Window
     {
-       
-        public MainWindow()
+        public Password()
         {
             InitializeComponent();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            User wnd = new User();
-            wnd.Show();
-            this.Close();
-        }
-
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            Password wnd = new Password();
-            wnd.Show();
-            this.Close();
+            if (passwordBox.Password.ToString()=="12345")
+            {
+                Admin wnd = new Admin();
+                wnd.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Неверный пароль!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

@@ -44,10 +44,10 @@
         <TextBlock x:Name="textBlock" FontSize="15" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="Выберите страну:" Margin="10"/>
         <TextBlock x:Name="textBlock1" FontSize="15" Grid.Column="2" Grid.Row="2" TextWrapping="Wrap" Text="Километраж трасс от           км" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBlock x:Name="textBlock2" FontSize="15" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" Text="Цена скипасса на неделю до           €" VerticalAlignment="Center"/>
-        <Button x:Name="button" Content="Найти" Grid.Column="3" Margin="10" Grid.Row="5" Click="button_Click"/>
+        <Button x:Name="button" FontSize="18" Content="Найти" Grid.Column="3" Margin="20" Grid.Row="4" Click="button_Click" Grid.RowSpan="2"/>
         <TextBox x:Name="textBoxKm" Grid.Column="2" Height="18" Margin="158, 2, 30, 0" Grid.Row="2" TextWrapping="Wrap" Width="35" Text="{Binding ElementName=sliderKm, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Center"/>
         <TextBox x:Name="textBoxSkipass" Grid.Column="2" Height="18" Margin="203, 2, 10, 0" Grid.Row="4" TextWrapping="Wrap" Width="35" Text="{Binding ElementName=sliderSkipass, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Center"/>
-        <Button x:Name="button1" Grid.ColumnSpan="1" Content="back" Margin="8, 5, 0, 5" Click="button1_Click"/>
+        <Button x:Name="button1" FontSize="18" Grid.ColumnSpan="1" Content="Назад" Margin="20" Click="button1_Click" Grid.Column="3" Grid.Row="2" Grid.RowSpan="2"/>
 
     </Grid>
 </Window>

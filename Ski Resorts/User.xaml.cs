@@ -24,23 +24,7 @@ namespace Ski_Resorts
         {
             InitializeComponent();
             lr = Serialization.Deserialize(lr);
-            foreach(Ski_Resort item in lr.Res)
-            {
-                int snow = 0;
-                if (checkBoxSnowpark.IsChecked ?? false)
-                {
-                    snow = 1;
-                }
-                int rink = 0;
-                if (checkBoxRink.IsChecked ?? false)
-                {
-                    rink = 1;
-                }
-                if ((comboBoxCountry.Text == item.Country) && (snow == 1 && item.Snowparks>=1 || snow == 0) && (rink == 1 && item.Rink == 1 || rink == 0) && (int.Parse(textBoxKm.Text) <= item.Km) && (int.Parse(textBoxSkipass.Text) >= item.Skipass))
-                {
-
-                }
-            } 
+            
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -55,6 +39,24 @@ namespace Ski_Resorts
             UserList wnd = new UserList();
             wnd.Show();
             this.Close();
+
+            foreach (Ski_Resort item in lr.Res)
+            {
+                int snow = 0;
+                if (checkBoxSnowpark.IsChecked ?? false)
+                {
+                    snow = 1;
+                }
+                int rink = 0;
+                if (checkBoxRink.IsChecked ?? false)
+                {
+                    rink = 1;
+                }
+                if ((comboBoxCountry.Text == item.Country) && (snow == 1 && item.Snowparks >= 1 || snow == 0) && (rink == 1 && item.Rink == 1 || rink == 0) && (int.Parse(textBoxKm.Text) <= item.Km) && (int.Parse(textBoxSkipass.Text) >= item.Skipass))
+                {
+
+                }
+            }
         }
     }
 }

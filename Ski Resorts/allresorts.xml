@@ -67,5 +67,16 @@
       <Rink>0</Rink>
       <Skipass>4</Skipass>
     </Ski_Resort>
+    <Ski_Resort>
+      <Name>2222</Name>
+      <Country>Франция</Country>
+      <Highest_Peak>22</Highest_Peak>
+      <Km>2</Km>
+      <Longest_Slope>2</Longest_Slope>
+      <Ski_Lifts>2</Ski_Lifts>
+      <Snowparks>2</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>2</Skipass>
+    </Ski_Resort>
   </Res>
 </ListOfResorts>
