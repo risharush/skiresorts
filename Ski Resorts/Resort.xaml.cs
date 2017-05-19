@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 
 namespace Ski_Resorts
 {
+    
     /// <summary>
     /// Логика взаимодействия для Resort.xaml
     /// </summary>

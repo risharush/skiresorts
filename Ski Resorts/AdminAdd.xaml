@@ -15,6 +15,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -25,13 +26,14 @@
         <Label x:Name="label1" Content="Страна" FontSize="21" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         <Label x:Name="label2" Content="Пик" FontSize="21" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         <Label x:Name="label3" Content="Километраж трасс" FontSize="21" HorizontalAlignment="Center" Margin="0" Grid.Row="2" VerticalAlignment="Center"/>
-        <Label x:Name="label4" Content="Самый длинный спуск " FontSize="21" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Grid.Row="2" Grid.ColumnSpan="3"/>
+        <Label x:Name="label4" Content="Самая длинная трасса" FontSize="21" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Grid.Row="2" Grid.Column="1"/>
         <Label x:Name="label5" Content="Подъёмники" FontSize="21" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Grid.Row="2"/>
         <Label x:Name="label6" Content="Сноупарки" FontSize="21" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Grid.Row="4"/>
-        <Label x:Name="label7" Content="Каток" FontSize="21" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Grid.Row="4"/>
+        <Label x:Name="label7" Content="Хелиски" FontSize="21" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Grid.Row="4"/>
         <Label x:Name="label8" Content="Скипасс" FontSize="21" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Grid.Row="4"/>
-        <TextBox x:Name="textBoxName" FontSize="20" Margin="20" Grid.Row="1"/>
-        <ComboBox x:Name="comboBoxCountry" Grid.Column="1" Margin="20" Grid.Row="1">
+        <Label x:Name="label9" Content="Ссылка на фото:" FontSize="21" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Grid.Row="6"/>
+        <TextBox x:Name="textBoxName" FontSize="18" Margin="15" Grid.Row="1"/>
+        <ComboBox x:Name="comboBoxCountry" FontSize="18" Grid.Column="1" Margin="15" Grid.Row="1">
             <TextBlock>Австрия</TextBlock>
             <TextBlock>Андорра</TextBlock>
             <TextBlock>Германия</TextBlock>
@@ -43,14 +45,15 @@
             <TextBlock>Франция</TextBlock>
             <TextBlock>Швейцария</TextBlock>
         </ComboBox>
-        <TextBox x:Name="textBoxPeak" Grid.Column="2" Margin="20" Grid.Row="1" TextWrapping="Wrap"/>
-        <TextBox x:Name="textBoxKm" Margin="20" Grid.Row="3" TextWrapping="Wrap"/>
-        <TextBox x:Name="textBoxSlope" Grid.Column="1" Margin="20" Grid.Row="3" TextWrapping="Wrap"/>
-        <TextBox x:Name="textBoxLifts" Grid.Column="2" Margin="20" Grid.Row="3" TextWrapping="Wrap"/>
-        <TextBox x:Name="textBoxSnowparks" Margin="20" Grid.Row="5" TextWrapping="Wrap"/>
-        <CheckBox x:Name="checkBoxRink" Grid.Column="1" Margin="107,30" Grid.Row="5"/>
-        <TextBox x:Name="textBoxSkipass" Grid.Column="2" Margin="20" Grid.Row="5" TextWrapping="Wrap"/>
-        <Button x:Name="button" Content="Добавить" FontSize="21" Grid.Column="1" Margin="20" Grid.Row="6" Click="button_Click"/>
-
+        <TextBox x:Name="textBoxPeak" FontSize="18" Grid.Column="2" Margin="15" Grid.Row="1" TextWrapping="Wrap"/>
+        <TextBox x:Name="textBoxKm" FontSize="18" Margin="15" Grid.Row="3" TextWrapping="Wrap"/>
+        <TextBox x:Name="textBoxSlope" FontSize="18" Grid.Column="1" Margin="15" Grid.Row="3" TextWrapping="Wrap"/>
+        <TextBox x:Name="textBoxLifts" FontSize="18" Grid.Column="2" Margin="15" Grid.Row="3" TextWrapping="Wrap"/>
+        <TextBox x:Name="textBoxSnowparks" FontSize="18" Margin="15" Grid.Row="5" TextWrapping="Wrap"/>
+        <CheckBox x:Name="checkBoxRink" Grid.Column="1" Margin="107, 24" Grid.Row="5"/>
+        <TextBox x:Name="textBoxSkipass" FontSize="18" Grid.Column="2" Margin="15" Grid.Row="5" TextWrapping="Wrap"/>
+        <TextBox x:Name="textBoxPhoto" FontSize="18" Text="C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/" Margin="15, 7" Grid.Row="6" TextWrapping="Wrap" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonAdd" Content="Добавить" FontSize="21" Grid.Column="2" Margin="15" Grid.Row="7" Click="buttonAdd_Click"/>
+        <Button x:Name="buttonBack" Content="Назад" FontSize="21" Grid.Column="1" Margin="15" Grid.Row="7" Click="buttonBack_Click"/>
     </Grid>
 </Window>

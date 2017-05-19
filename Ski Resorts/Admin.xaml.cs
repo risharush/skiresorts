@@ -42,5 +42,12 @@ namespace Ski_Resorts
             wnd.Show();
             this.Close();
         }
+
+        private void buttonBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow wnd = new MainWindow();
+            wnd.Show();
+            this.Close();
+        }
     }
 }

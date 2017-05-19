@@ -30,26 +30,36 @@ namespace Ski_Resorts
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
-            int rink = 0;
-            if (checkBoxRink.IsChecked ?? false)
+            if (textBoxName.Text == null || comboBoxCountry.Text == null || textBoxPeak.Text == null || textBoxSlope.Text == null || textBoxKm.Text == null || textBoxSnowparks.Text == null || textBoxSkipass.Text == null)
+                MessageBox.Show("Заполните все поля!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Hand);
+            else
             {
-                rink = 1;
-            }
-            
+                int rink = 0;
+                if (checkBoxRink.IsChecked ?? false)
+                {
+                    rink = 1;
+                }
+
                 lr = Serialization.Deserialize(lr);
 
-            Ski_Resort sr = new Ski_Resort(textBoxName.Text, comboBoxCountry.Text, int.Parse(textBoxPeak.Text), int.Parse(textBoxKm.Text), int.Parse(textBoxSlope.Text), int.Parse(textBoxLifts.Text), int.Parse(textBoxSnowparks.Text), rink, int.Parse(textBoxSkipass.Text));
-           
-            lr.Res.Add(sr);
-            Serialization.Serialize(lr);
+                Ski_Resort sr = new Ski_Resort(textBoxName.Text, comboBoxCountry.Text, int.Parse(textBoxPeak.Text), int.Parse(textBoxKm.Text), int.Parse(textBoxSlope.Text), int.Parse(textBoxLifts.Text), int.Parse(textBoxSnowparks.Text), rink, int.Parse(textBoxSkipass.Text), textBoxPhoto.Text);
 
-            Admin wnd = new Admin();
-            wnd.Show();
-            this.Close();
+                lr.Res.Add(sr);
+                Serialization.Serialize(lr);
+
+                Admin wnd = new Admin();
+                wnd.Show();
+                Close();
+            }
         }
 
-       
+        private void buttonBack_Click(object sender, RoutedEventArgs e)
+        {
+            Admin wnd = new Admin();
+            wnd.Show();
+            Close();
+        }
     }
 }

@@ -19,6 +19,7 @@ namespace Ski_Resorts
     /// </summary>
     public partial class UserList : Window
     {
+        public ListOfResorts lr = new ListOfResorts();
         public UserList()
         {
             InitializeComponent();
@@ -28,7 +29,44 @@ namespace Ski_Resorts
         {
             User wnd = new User();
             wnd.Show();
-            this.Close();
+            Close();
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Resort wnd = new Resort();
+            wnd.Show();
+            Close();
+            string sel = listViewResorts.SelectedItem.ToString();
+            string name = sel.Split(' ')[0];
+            string rink = null;
+            string snowparks = null;
+            lr = Serialization.Deserialize(lr);
+            foreach (Ski_Resort res in lr.Res)
+            {
+                if (res.Name == name)
+                {
+                    if (res.Rink == 1)
+                        rink = "хелиски есть";
+                    else
+                        rink = "хелиски нет";
+                    if (res.Snowparks >= 1)
+                        snowparks = "Кол-во сноупарков: " + res.Snowparks + ", ";
+                    else
+                        snowparks = "Сноупарка нет, ";
+
+                    wnd.labelName.Content = "Курорт: " + res.Name;
+                    wnd.labelCountry.Content = "Страна: " + res.Country;
+                    wnd.labelPeak.Content = "Пик: " + res.Highest_Peak + " м";
+                    wnd.labelKm.Content = "Протяжённость трасс: " + res.Km + " км";
+                    wnd.labelSlope.Content = "Самая длинная трасса: " + res.Longest_Slope + " км";
+                    wnd.labelLifts.Content = "Кол-во подъёмников: " + res.Ski_Lifts;
+                    wnd.labelSnow.Content = snowparks + rink;
+                    wnd.labelSkipass.Content = "Стоимость скипасса на неделю: " + res.Skipass + "€";
+                    // wnd.image.Source = res.photo;
+                }
+            }
+            
         }
     }
 }

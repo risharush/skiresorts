@@ -78,5 +78,40 @@
       <Rink>1</Rink>
       <Skipass>2</Skipass>
     </Ski_Resort>
+    <Ski_Resort>
+      <Name>jhikhlih</Name>
+      <Country>Норвегия</Country>
+      <Highest_Peak>12</Highest_Peak>
+      <Km>1</Km>
+      <Longest_Slope>1</Longest_Slope>
+      <Ski_Lifts>232</Ski_Lifts>
+      <Snowparks>3</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>3</Skipass>
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>kpomom</Name>
+      <Country>Андорра</Country>
+      <Highest_Peak>686</Highest_Peak>
+      <Km>6</Km>
+      <Longest_Slope>868</Longest_Slope>
+      <Ski_Lifts>686</Ski_Lifts>
+      <Snowparks>86</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>6868</Skipass>
+      <Photo>86;km;lm;km;</Photo>
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Зёльден</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>3340</Highest_Peak>
+      <Km>145</Km>
+      <Longest_Slope>15</Longest_Slope>
+      <Ski_Lifts>34</Ski_Lifts>
+      <Snowparks>2</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>299</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/зёльден.jpg</Photo>
+    </Ski_Resort>
   </Res>
 </ListOfResorts>

@@ -31,14 +31,14 @@ namespace Ski_Resorts
         {
             MainWindow wnd = new MainWindow();
             wnd.Show();
-            this.Close();
+            Close();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             UserList wnd = new UserList();
             wnd.Show();
-            this.Close();
+            Close();
 
             foreach (Ski_Resort item in lr.Res)
             {
@@ -52,9 +52,9 @@ namespace Ski_Resorts
                 {
                     rink = 1;
                 }
-                if ((comboBoxCountry.Text == item.Country) && (snow == 1 && item.Snowparks >= 1 || snow == 0) && (rink == 1 && item.Rink == 1 || rink == 0) && (int.Parse(textBoxKm.Text) <= item.Km) && (int.Parse(textBoxSkipass.Text) >= item.Skipass))
+                if ((comboBoxCountry.Text == item.Country || comboBoxCountry.Text == "Любая") && (snow == 1 && item.Snowparks >= 1 || snow == 0) && (rink == 1 && item.Rink == 1 || rink == 0) && (int.Parse(textBoxKm.Text) <= item.Km) && (int.Parse(textBoxSkipass.Text) >= item.Skipass))
                 {
-
+                    wnd.listViewResorts.Items.Add(item.Name + ' ' + item.Country);
                 }
             }
         }

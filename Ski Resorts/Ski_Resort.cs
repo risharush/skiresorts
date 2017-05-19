@@ -81,7 +81,16 @@ namespace Ski_Resorts
             set { _skipass = value; }
         }
 
-        public Ski_Resort(string name, string country, int highest_peak, int km, int longestslope, int ski_lifts, int snowparks, int rink, int skipass)
+        private string _photo;
+
+        public string Photo
+        {
+            get { return _photo; }
+            set { _photo = value; }
+        }
+
+
+        public Ski_Resort(string name, string country, int highest_peak, int km, int longestslope, int ski_lifts, int snowparks, int rink, int skipass, string photo)
         {
             Name = name;
             Country = country;
@@ -92,6 +101,7 @@ namespace Ski_Resorts
             Snowparks = snowparks;
             Rink = rink;
             Skipass = skipass;
+            Photo = photo;
         }
 
         public Ski_Resort()

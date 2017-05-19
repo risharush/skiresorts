@@ -20,15 +20,15 @@
             <RowDefinition Height="1.2*"/>
         </Grid.RowDefinitions>
         <Image x:Name="image" Margin="0" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <Label x:Name="label" FontSize="24" Content="Курарот:" Margin="10,0"/>
-        <Label x:Name="label1" FontSize="24" Content="Страна:" Margin="10,0" Grid.Column="1"/>
-        <Label x:Name="label2" FontSize="20" Content="П" Margin="10,0" Grid.Row="2"/>
-        <Label x:Name="label3" FontSize="20" Content="Label" Margin="10,0" Grid.Row="2" Grid.Column="1"/>
-        <Label x:Name="label4" FontSize="20" Content="Label" Margin="10,0" Grid.Row="3"/>
-        <Label x:Name="label5" FontSize="20" Content="Label" Margin="10,0" Grid.Row="3" Grid.Column="1"/>
-        <Label x:Name="label6" FontSize="20" Content="Label" Margin="10,0" Grid.Row="4"/>
-        <Label x:Name="label7" FontSize="20" Content="Label" Margin="10,0" Grid.Row="4" Grid.Column="1"/>
-        <Button x:Name="button" FontSize="20" Content="Вернуться к результатам поиска" Margin="19.667,10" Grid.Row="5" Grid.Column="1"/>
+        <Label x:Name="labelName" FontSize="24" Content="" Margin="10,0"/>
+        <Label x:Name="labelCountry" FontSize="24" Content="" Margin="10,0" Grid.Column="1"/>
+        <Label x:Name="labelPeak" FontSize="18" Content="" Margin="10,0" Grid.Row="2"/>
+        <Label x:Name="labelLifts" FontSize="18" Content="" Margin="10,0" Grid.Row="2" Grid.Column="1"/>
+        <Label x:Name="labelKm" FontSize="18" Content="" Margin="10,0" Grid.Row="3"/>
+        <Label x:Name="labelSnow" FontSize="18" Content="" Margin="10,0" Grid.Row="3" Grid.Column="1"/>
+        <Label x:Name="labelSlope" FontSize="18" Content="" Margin="10,0" Grid.Row="4"/>
+        <Label x:Name="labelSkipass" FontSize="18" Content="" Margin="10,0" Grid.Row="4" Grid.Column="1"/>
+        <Button x:Name="button" FontSize="20" Content="Вернуться к результатам поиска" Margin="10" Grid.Row="5" Grid.Column="1"/>
 
     </Grid>
 </Window>
