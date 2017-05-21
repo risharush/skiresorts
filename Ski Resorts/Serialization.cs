@@ -13,7 +13,7 @@ namespace Ski_Resorts
         public static void Serialize(ListOfResorts lr)
         {
             
-            using (FileStream fs = new FileStream("../../allresorts.xml", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("../../allresorts.xml", FileMode.Create))
             {
                ser.Serialize(fs, lr);
             }
@@ -23,7 +23,7 @@ namespace Ski_Resorts
         public static ListOfResorts Deserialize(ListOfResorts lr)
         {
             ListOfResorts resorts = null;
-            using (FileStream fs = new FileStream("../../allresorts.xml", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("../../allresorts.xml", FileMode.Open))
             {
                 resorts = (ListOfResorts)ser.Deserialize(fs);
 

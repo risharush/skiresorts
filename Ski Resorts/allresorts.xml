@@ -2,116 +2,68 @@
 <ListOfResorts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Res>
     <Ski_Resort>
-      <Name>QEW</Name>
-      <Country>Испания</Country>
-      <Highest_Peak>1234</Highest_Peak>
-      <Km>1234</Km>
-      <Longest_Slope>1234</Longest_Slope>
-      <Ski_Lifts>1234</Ski_Lifts>
-      <Snowparks>1234</Snowparks>
-      <Rink>0</Rink>
-      <Skipass>124</Skipass>
-    </Ski_Resort>
-    <Ski_Resort>
-      <Name>543</Name>
-      <Country>Норвегия</Country>
-      <Highest_Peak>465</Highest_Peak>
-      <Km>465</Km>
-      <Longest_Slope>465</Longest_Slope>
-      <Ski_Lifts>465</Ski_Lifts>
-      <Snowparks>4654</Snowparks>
-      <Rink>0</Rink>
-      <Skipass>64</Skipass>
-    </Ski_Resort>
-    <Ski_Resort>
-      <Name>1</Name>
-      <Country>Италия</Country>
-      <Highest_Peak>1</Highest_Peak>
-      <Km>1</Km>
-      <Longest_Slope>1</Longest_Slope>
-      <Ski_Lifts>1</Ski_Lifts>
-      <Snowparks>1</Snowparks>
-      <Rink>0</Rink>
-      <Skipass>1</Skipass>
-    </Ski_Resort>
-    <Ski_Resort>
-      <Name>22</Name>
-      <Country>Италия</Country>
-      <Highest_Peak>2</Highest_Peak>
-      <Km>2</Km>
-      <Longest_Slope>2</Longest_Slope>
-      <Ski_Lifts>2</Ski_Lifts>
-      <Snowparks>2</Snowparks>
-      <Rink>0</Rink>
-      <Skipass>2</Skipass>
-    </Ski_Resort>
-    <Ski_Resort>
-      <Name>3</Name>
-      <Country>Россия</Country>
-      <Highest_Peak>3</Highest_Peak>
-      <Km>3</Km>
-      <Longest_Slope>3</Longest_Slope>
-      <Ski_Lifts>3</Ski_Lifts>
-      <Snowparks>3</Snowparks>
-      <Rink>1</Rink>
-      <Skipass>3</Skipass>
-    </Ski_Resort>
-    <Ski_Resort>
-      <Name>sadfsdf</Name>
-      <Country>Франция</Country>
-      <Highest_Peak>4</Highest_Peak>
-      <Km>4</Km>
-      <Longest_Slope>4</Longest_Slope>
-      <Ski_Lifts>4</Ski_Lifts>
-      <Snowparks>4</Snowparks>
-      <Rink>0</Rink>
-      <Skipass>4</Skipass>
-    </Ski_Resort>
-    <Ski_Resort>
-      <Name>2222</Name>
-      <Country>Франция</Country>
-      <Highest_Peak>22</Highest_Peak>
-      <Km>2</Km>
-      <Longest_Slope>2</Longest_Slope>
-      <Ski_Lifts>2</Ski_Lifts>
-      <Snowparks>2</Snowparks>
-      <Rink>1</Rink>
-      <Skipass>2</Skipass>
-    </Ski_Resort>
-    <Ski_Resort>
-      <Name>jhikhlih</Name>
-      <Country>Норвегия</Country>
-      <Highest_Peak>12</Highest_Peak>
-      <Km>1</Km>
-      <Longest_Slope>1</Longest_Slope>
-      <Ski_Lifts>232</Ski_Lifts>
-      <Snowparks>3</Snowparks>
-      <Rink>1</Rink>
-      <Skipass>3</Skipass>
-    </Ski_Resort>
-    <Ski_Resort>
-      <Name>kpomom</Name>
+      <Name>iuhih</Name>
       <Country>Андорра</Country>
-      <Highest_Peak>686</Highest_Peak>
-      <Km>6</Km>
-      <Longest_Slope>868</Longest_Slope>
-      <Ski_Lifts>686</Ski_Lifts>
-      <Snowparks>86</Snowparks>
+      <Highest_Peak>789</Highest_Peak>
+      <Km>765</Km>
+      <Longest_Slope>87</Longest_Slope>
+      <Ski_Lifts>787</Ski_Lifts>
+      <Snowparks>9</Snowparks>
       <Rink>1</Rink>
-      <Skipass>6868</Skipass>
-      <Photo>86;km;lm;km;</Photo>
-    </Ski_Resort>
-    <Ski_Resort>
-      <Name>Зёльден</Name>
-      <Country>Австрия</Country>
-      <Highest_Peak>3340</Highest_Peak>
-      <Km>145</Km>
-      <Longest_Slope>15</Longest_Slope>
-      <Ski_Lifts>34</Ski_Lifts>
-      <Snowparks>2</Snowparks>
-      <Rink>1</Rink>
-      <Skipass>299</Skipass>
-      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/зёльден.jpg</Photo>
+      <Skipass>765</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/зёльден.jpg</Photo>
+      <Hotels>
+        <Hotel>
+          <Name>Роза</Name>
+          <Price>100</Price>
+          <People>2</People>
+          <Km>4</Km>
+          <Wifi>1</Wifi>
+          <Sauna>1</Sauna>
+          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo1>
+          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo2>
+        </Hotel>
+        <Hotel>
+          <Name>Винегрет</Name>
+          <Price>100</Price>
+          <People>2</People>
+          <Km>4</Km>
+          <Wifi>1</Wifi>
+          <Sauna>1</Sauna>
+          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo1>
+          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo2>
+        </Hotel>
+        <Hotel>
+          <Name>Ромашка</Name>
+          <Price>57</Price>
+          <People>5</People>
+          <Km>10</Km>
+          <Wifi>1</Wifi>
+          <Sauna>1</Sauna>
+          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo1>
+          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo2>
+        </Hotel>
+        <Hotel>
+          <Name>Маргаритка</Name>
+          <Price>33</Price>
+          <People>1</People>
+          <Km>15</Km>
+          <Wifi>0</Wifi>
+          <Sauna>0</Sauna>
+          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo1>
+          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo2>
+        </Hotel>
+        <Hotel>
+          <Name>сериаЛИЗАВАЛИ</Name>
+          <Price>57</Price>
+          <People>2</People>
+          <Km>3</Km>
+          <Wifi>1</Wifi>
+          <Sauna>1</Sauna>
+          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo1>
+          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo2>
+        </Hotel>
+      </Hotels>
     </Ski_Resort>
   </Res>
 </ListOfResorts>

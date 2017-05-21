@@ -55,11 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddHotel.xaml.cs">
+      <DependentUpon>AddHotel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Admin.xaml.cs">
       <DependentUpon>Admin.xaml</DependentUpon>
     </Compile>
     <Compile Include="AdminAdd.xaml.cs">
       <DependentUpon>AdminAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel.cs" />
+    <Compile Include="Hotels.xaml.cs">
+      <DependentUpon>Hotels.xaml</DependentUpon>
     </Compile>
     <Compile Include="ListOfResorts.cs" />
     <Compile Include="Password.xaml.cs">
@@ -76,11 +83,19 @@
     <Compile Include="UserList.xaml.cs">
       <DependentUpon>UserList.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddHotel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AdminAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hotels.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

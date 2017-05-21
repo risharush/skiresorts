@@ -14,20 +14,14 @@ using System.Windows.Shapes;
 
 namespace Ski_Resorts
 {
-    
     /// <summary>
-    /// Логика взаимодействия для Resort.xaml
+    /// Логика взаимодействия для Hotels.xaml
     /// </summary>
-    public partial class Resort : Window
+    public partial class Hotels : Window
     {
-        public Resort()
+        public Hotels()
         {
             InitializeComponent();
-        }
-
-        private void buttonHotel_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

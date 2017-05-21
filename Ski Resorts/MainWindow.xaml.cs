@@ -22,10 +22,13 @@ namespace Ski_Resorts
     /// </summary>
     public partial class MainWindow : Window
     {
-       
+        public ListOfResorts lr = new ListOfResorts();
+        public List<Hotel> hotels = new List<Hotel>();
+
         public MainWindow()
         {
             InitializeComponent();
+            lr.Res = new List<Ski_Resort>();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -33,6 +36,7 @@ namespace Ski_Resorts
             User wnd = new User();
             wnd.Show();
             this.Close();
+
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -40,6 +44,8 @@ namespace Ski_Resorts
             Password wnd = new Password();
             wnd.Show();
             this.Close();
+
+            
         }
     }
 }

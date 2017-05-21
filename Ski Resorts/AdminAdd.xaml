@@ -8,19 +8,19 @@
         Title="AdminAdd" Height="550" Width="700" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="label" Content="Название курорта" FontSize="21" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         <Label x:Name="label1" Content="Страна" FontSize="21" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
@@ -52,8 +52,17 @@
         <TextBox x:Name="textBoxSnowparks" FontSize="18" Margin="15" Grid.Row="5" TextWrapping="Wrap"/>
         <CheckBox x:Name="checkBoxRink" Grid.Column="1" Margin="107, 24" Grid.Row="5"/>
         <TextBox x:Name="textBoxSkipass" FontSize="18" Grid.Column="2" Margin="15" Grid.Row="5" TextWrapping="Wrap"/>
-        <TextBox x:Name="textBoxPhoto" FontSize="18" Text="C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/" Margin="15, 7" Grid.Row="6" TextWrapping="Wrap" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Button x:Name="buttonAdd" Content="Добавить" FontSize="21" Grid.Column="2" Margin="15" Grid.Row="7" Click="buttonAdd_Click"/>
+        <TextBox x:Name="textBoxPhoto" FontSize="12" Text="C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/" Margin="15" Grid.Row="6" TextWrapping="Wrap" Grid.Column="1" Grid.ColumnSpan="1"/>
+        <Button x:Name="buttonPhoto" Content="Выбрать фото" FontSize="21" Grid.Column="2" Margin="15" Grid.Row="6" Click="buttonPhoto_Click"/>
+
+
+        <Button x:Name="buttonAdd" Visibility="Hidden" Content="Добавить" FontSize="21" Grid.Column="2" Margin="15" Grid.Row="7" Click="buttonAdd_Click"/>
+        <!--<Button x:Name="buttonHotel" Visibility="Hidden" Content="Добавить отель" FontSize="21" Margin="15" Grid.Row="7" Click="buttonHotel_Click"/>-->
         <Button x:Name="buttonBack" Content="Назад" FontSize="21" Grid.Column="1" Margin="15" Grid.Row="7" Click="buttonBack_Click"/>
+
+        <Button x:Name="buttonEdit" Visibility="Hidden" Content="Сохранить" FontSize="21" Grid.Column="2" Margin="15" Grid.Row="7" Click="buttonEdit_Click"/>
+        <Button x:Name="buttonAllHotels" Visibility="Hidden" Content="Отели" FontSize="21" Margin="15" Grid.Row="7" Click="buttonAllHotels_Click"/>
+
+
     </Grid>
 </Window>

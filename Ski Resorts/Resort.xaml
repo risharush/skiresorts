@@ -28,7 +28,7 @@
         <Label x:Name="labelSnow" FontSize="18" Content="" Margin="10,0" Grid.Row="3" Grid.Column="1"/>
         <Label x:Name="labelSlope" FontSize="18" Content="" Margin="10,0" Grid.Row="4"/>
         <Label x:Name="labelSkipass" FontSize="18" Content="" Margin="10,0" Grid.Row="4" Grid.Column="1"/>
-        <Button x:Name="button" FontSize="20" Content="Вернуться к результатам поиска" Margin="10" Grid.Row="5" Grid.Column="1"/>
+        <Button x:Name="buttonHotel" FontSize="18" Content="Посмотреть рекомендации по отелям" Margin="10" Grid.Row="5" Grid.Column="1" Click="buttonHotel_Click"/>
 
     </Grid>
 </Window>

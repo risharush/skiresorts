@@ -36,7 +36,7 @@ namespace Ski_Resorts
         {
             Resort wnd = new Resort();
             wnd.Show();
-            Close();
+
             string sel = listViewResorts.SelectedItem.ToString();
             string name = sel.Split(' ')[0];
             string rink = null;
@@ -63,7 +63,7 @@ namespace Ski_Resorts
                     wnd.labelLifts.Content = "Кол-во подъёмников: " + res.Ski_Lifts;
                     wnd.labelSnow.Content = snowparks + rink;
                     wnd.labelSkipass.Content = "Стоимость скипасса на неделю: " + res.Skipass + "€";
-                    // wnd.image.Source = res.photo;
+                    // wnd.image = Image.From;
                 }
             }
             

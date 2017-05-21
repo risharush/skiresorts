@@ -8,7 +8,7 @@
         Title="Admin" Height="550" Width="700" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="6*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
@@ -24,9 +24,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="button" Content="Добавить курорт" FontSize="20" Margin="10" Grid.Row="1" Click="button_Click"/>
-        <Button x:Name="button1" Content="Редактировать курорт" FontSize="20" Margin="10" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1"/>
-        <Button x:Name="button2" Content="Удалить курорт" FontSize="20" Grid.Column="2" Margin="10" Grid.Row="1"/>
+        <Button x:Name="buttonAdd" Content="Добавить курорт" FontSize="20" Margin="10" Grid.Row="1" Click="buttonAdd_Click"/>
+        <Button x:Name="buttonEdit" Content="Редактировать курорт" FontSize="20" Margin="10" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Click="buttonEdit_Click"/>
+        <Button x:Name="buttonDelete" Content="Удалить курорт" FontSize="20" Grid.Column="2" Margin="10" Grid.Row="1" Click="buttonDelete_Click"/>
         <Button x:Name="buttonBack" Content="Назад" FontSize="20" Grid.Column="1" Margin="10" Grid.Row="2" Click="buttonBack_Click"/>
 
     </Grid>

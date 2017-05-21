@@ -89,8 +89,17 @@ namespace Ski_Resorts
             set { _photo = value; }
         }
 
+        private List<Hotel> _hotels;
 
-        public Ski_Resort(string name, string country, int highest_peak, int km, int longestslope, int ski_lifts, int snowparks, int rink, int skipass, string photo)
+        public List<Hotel> Hotels
+        {
+            get { return _hotels; }
+            set { _hotels = value; }
+        }
+
+
+
+        public Ski_Resort(string name, string country, int highest_peak, int km, int longestslope, int ski_lifts, int snowparks, int rink, int skipass, string photo, List<Hotel> hotels)
         {
             Name = name;
             Country = country;
@@ -102,11 +111,17 @@ namespace Ski_Resorts
             Rink = rink;
             Skipass = skipass;
             Photo = photo;
+            Hotels = hotels;
         }
 
         public Ski_Resort()
         {
 
+        }
+
+        public string Show()
+        {
+            return string.Format(Name + ' ' + Country + ' ' + Highest_Peak + ' ' + Km + ' ' + Longest_Slope + ' ' + Ski_Lifts + ' ' + Snowparks + ' ' + Rink + ' ' + Skipass);
         }
     }
 }

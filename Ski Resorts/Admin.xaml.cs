@@ -26,21 +26,32 @@ namespace Ski_Resorts
         public Admin()
         {
             InitializeComponent();
-            
-            lr = Serialization.Deserialize(lr);
+
+
+            if (File.Exists("../../allresorts.xml"))
+            {
+                listView.Items.Clear();
+                lr = Serialization.Deserialize(lr);
                 foreach (var item in lr.Res)
                 {
-                    string str = item.Name + ' ' + item.Country + ' ' + item.Highest_Peak + ' ' + item.Km + ' ' + item.Longest_Slope + ' ' + item.Ski_Lifts + ' ' + item.Snowparks + ' ' + item.Rink + ' ' + item.Skipass;
-                    listView.Items.Add(str);
+                    listView.Items.Add(item.Show());
                 }
+            }
 
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
             AdminAdd wnd = new AdminAdd();
             wnd.Show();
             this.Close();
+
+
+            //wnd.buttonHotel.Visibility = Visibility.Visible;
+            wnd.buttonAdd.Visibility = Visibility.Visible;
+            wnd.buttonAllHotels.Visibility = Visibility.Hidden;
+            wnd.buttonEdit.Visibility = Visibility.Hidden;
+
         }
 
         private void buttonBack_Click(object sender, RoutedEventArgs e)
@@ -48,6 +59,68 @@ namespace Ski_Resorts
             MainWindow wnd = new MainWindow();
             wnd.Show();
             this.Close();
+        }
+
+        private void buttonEdit_Click(object sender, RoutedEventArgs e)
+        {
+            if (listView.SelectedItem != null)
+            {
+                AdminAdd wnd = new AdminAdd();
+                wnd.Show();
+                this.Close();
+             
+                foreach (var item in lr.Res)
+                {
+
+                    if (listView.SelectedItem.ToString() == item.Show())
+                    {
+                        wnd.textBoxName.Text = item.Name;
+                        wnd.comboBoxCountry.Text = item.Country;
+                        wnd.textBoxKm.Text = item.Km.ToString();
+                        wnd.textBoxPeak.Text = item.Highest_Peak.ToString();
+                        wnd.textBoxSlope.Text = item.Longest_Slope.ToString();
+                        wnd.textBoxLifts.Text = item.Ski_Lifts.ToString();
+                        wnd.textBoxSnowparks.Text = item.Snowparks.ToString();
+                        wnd.textBoxSkipass.Text = item.Skipass.ToString();
+                        if (item.Rink == 1)
+                        wnd.checkBoxRink.IsChecked= true;
+                        wnd.ski = item;
+                    }
+                }
+                wnd.buttonAllHotels.Visibility = Visibility.Visible;
+                wnd.buttonEdit.Visibility = Visibility.Visible;
+                //wnd.buttonHotel.Visibility = Visibility.Hidden;
+                wnd.buttonAdd.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                MessageBox.Show("Выберите курорт!", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void buttonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            if (listView.SelectedItem != null)
+            {
+                foreach (var item in lr.Res)
+                {
+                    if (item.Show() == listView.SelectedItem.ToString())
+                    {
+                        lr.Res.Remove(item);
+                        break;
+                    }
+                }
+                listView.Items.Clear();
+                foreach (var item in lr.Res)
+                {
+                    listView.Items.Add(item.Show());
+                }
+                Serialization.Serialize(lr);
+            }
+            else
+            {
+                MessageBox.Show("Выберите курорт!", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

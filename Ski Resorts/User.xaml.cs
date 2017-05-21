@@ -23,12 +23,14 @@ namespace Ski_Resorts
         public User()
         {
             InitializeComponent();
+
             lr = Serialization.Deserialize(lr);
             
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+
             MainWindow wnd = new MainWindow();
             wnd.Show();
             Close();
