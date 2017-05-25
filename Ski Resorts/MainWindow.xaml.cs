@@ -33,10 +33,17 @@ namespace Ski_Resorts
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            User wnd = new User();
-            wnd.Show();
-            this.Close();
-
+            try
+            {
+                Log.Logir("Вход пользователя " + DateTime.Now);
+                User wnd = new User();
+                wnd.Show();
+                this.Close();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.ToString());
+            }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -44,8 +51,6 @@ namespace Ski_Resorts
             Password wnd = new Password();
             wnd.Show();
             this.Close();
-
-            
         }
     }
 }

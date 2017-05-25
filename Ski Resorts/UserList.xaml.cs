@@ -34,39 +34,50 @@ namespace Ski_Resorts
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Resort wnd = new Resort();
-            wnd.Show();
-
-            string sel = listViewResorts.SelectedItem.ToString();
-            string name = sel.Split(' ')[0];
-            string rink = null;
-            string snowparks = null;
-            lr = Serialization.Deserialize(lr);
-            foreach (Ski_Resort res in lr.Res)
+            try
             {
-                if (res.Name == name)
+                if (listViewResorts.SelectedItem != null)
                 {
-                    if (res.Rink == 1)
-                        rink = "хелиски есть";
-                    else
-                        rink = "хелиски нет";
-                    if (res.Snowparks >= 1)
-                        snowparks = "Кол-во сноупарков: " + res.Snowparks + ", ";
-                    else
-                        snowparks = "Сноупарка нет, ";
+                    Resort wnd = new Resort();
+                    wnd.Show();
 
-                    wnd.labelName.Content = "Курорт: " + res.Name;
-                    wnd.labelCountry.Content = "Страна: " + res.Country;
-                    wnd.labelPeak.Content = "Пик: " + res.Highest_Peak + " м";
-                    wnd.labelKm.Content = "Протяжённость трасс: " + res.Km + " км";
-                    wnd.labelSlope.Content = "Самая длинная трасса: " + res.Longest_Slope + " км";
-                    wnd.labelLifts.Content = "Кол-во подъёмников: " + res.Ski_Lifts;
-                    wnd.labelSnow.Content = snowparks + rink;
-                    wnd.labelSkipass.Content = "Стоимость скипасса на неделю: " + res.Skipass + "€";
-                    // wnd.image = Image.From;
+                    string sel = listViewResorts.SelectedItem.ToString();
+                    string name = sel.Split(' ')[0];
+                    string rink = null;
+                    string snowparks = null;
+                    lr = Serialization.Deserialize(lr);
+                    foreach (Ski_Resort res in lr.Res)
+                    {
+                        if (res.Name == name)
+                        {
+                            if (res.Rink == 1)
+                                rink = "хелиски есть";
+                            else
+                                rink = "хелиски нет";
+                            if (res.Snowparks >= 1)
+                                snowparks = "Кол-во сноупарков: " + res.Snowparks + ", ";
+                            else
+                                snowparks = "Сноупарка нет, ";
+
+                            wnd.labelName.Content = "Курорт: " + res.Name;
+                            wnd.labelCountry.Content = "Страна: " + res.Country;
+                            wnd.labelPeak.Content = "Пик: " + res.Highest_Peak + " м";
+                            wnd.labelKm.Content = "Протяжённость трасс: " + res.Km + " км";
+                            wnd.labelSlope.Content = "Самая длинная трасса: " + res.Longest_Slope + " км";
+                            wnd.labelLifts.Content = "Кол-во подъёмников: " + res.Ski_Lifts;
+                            wnd.labelSnow.Content = snowparks + rink;
+                            wnd.labelSkipass.Content = "Стоимость скипасса на неделю: " + res.Skipass + "€";
+                            wnd.image.Source = new BitmapImage(new Uri(res.Photo));
+                        }
+                    }
                 }
+                else
+                    MessageBox.Show("Выберите курорт!", "", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            
+            catch (Exception er)
+            {
+                MessageBox.Show(er.ToString());
+            }
         }
     }
 }

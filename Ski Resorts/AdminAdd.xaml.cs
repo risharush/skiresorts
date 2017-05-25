@@ -32,16 +32,17 @@ namespace Ski_Resorts
 
         public AdminAdd()
         {
-           
-            InitializeComponent();
-
-            lr.Res = new List<Ski_Resort>();
-            if (File.Exists("../../allresorts.xml"))
+            try
             {
-               
-                lr = Serialization.Deserialize(lr);
+                InitializeComponent();
 
-            }
+                lr.Res = new List<Ski_Resort>();
+                if (File.Exists("../../allresorts.xml"))
+                {
+
+                    lr = Serialization.Deserialize(lr);
+
+                }
                 foreach (var item in lr.Res)
                 {
                     foreach (var h in item.Hotels)
@@ -49,119 +50,162 @@ namespace Ski_Resorts
                         hotels.Add(h);
                     }
                 }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.ToString());
+            }
         }
 
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (textBoxName.Text == null || comboBoxCountry.Text == null || textBoxPeak.Text == null || textBoxSlope.Text == null || textBoxKm.Text == null || textBoxSnowparks.Text == null || textBoxSkipass.Text == null)
-                MessageBox.Show("Заполните все поля!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Hand);
-            else
+            try
             {
-                int rink = 0;
-                if (checkBoxRink.IsChecked ?? false)
+                if (textBoxName.Text == "" || comboBoxCountry.Text == "" || textBoxPeak.Text == "" || textBoxSlope.Text == "" || textBoxKm.Text == "" || textBoxSnowparks.Text == "" || textBoxSkipass.Text == "")
+                    MessageBox.Show("Заполните все поля!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Hand);
+                else
                 {
-                    rink = 1;
+                    int rink = 0;
+                    if (checkBoxRink.IsChecked ?? false)
+                    {
+                        rink = 1;
+                    }
+                    try
+                    {
+                        Ski_Resort sr = new Ski_Resort(textBoxName.Text, comboBoxCountry.Text, int.Parse(textBoxPeak.Text), int.Parse(textBoxKm.Text), int.Parse(textBoxSlope.Text), int.Parse(textBoxLifts.Text), int.Parse(textBoxSnowparks.Text), rink, int.Parse(textBoxSkipass.Text), textBoxPhoto.Text, hotels);
+                        lr.Res.Add(sr);
+                        Serialization.Serialize(lr);
+                    }
+                    catch (Exception er)
+                    {
+                        MessageBox.Show(er.ToString());
+                    }
+                    Admin wnd = new Admin();
+                    wnd.Show();
+                    Close();
                 }
 
-                Ski_Resort sr = new Ski_Resort(textBoxName.Text, comboBoxCountry.Text, int.Parse(textBoxPeak.Text), int.Parse(textBoxKm.Text), int.Parse(textBoxSlope.Text), int.Parse(textBoxLifts.Text), int.Parse(textBoxSnowparks.Text), rink, int.Parse(textBoxSkipass.Text), textBoxPhoto.Text, hotels);
+                Log.Logir("Добавлен курорт " + textBoxName.Text + " " + DateTime.Now);
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.ToString());
+            }
+        }
 
-                lr.Res.Add(sr);
+        private void buttonBack_Click(object sender, RoutedEventArgs e)
+        {
+                Admin wnd = new Admin();
+                wnd.Show();
+                Close();
+        }
+
+        private void buttonPhoto_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "jpeg|*.jpg";
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    var fileN = openFileDialog.FileName;
+                    var nPath = System.IO.Path.GetFileName(fileN);
+                    var curPAth = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                    nPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(curPAth) + "/photo/", nPath);
+
+                    File.Copy(fileN, nPath, true);
+                    BitmapImage photo;
+                    photo = new BitmapImage(new Uri(nPath));
+                    textBoxPhoto.Text = nPath;
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.ToString());
+            }
+        }
+
+        private void buttonHotel_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                AddHotel wnd = new AddHotel();
+                wnd.Show();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.ToString());
+            }
+        }
+
+        /*СОХРАНИТЬ */
+        private void buttonEdit_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (File.Exists("../../allresorts.xml"))
+                {
+                    lr = Serialization.Deserialize(lr);
+                }
+                foreach (var item in lr.Res)
+                {
+                    if (ski.Name == item.Name)
+                    {
+                        item.Name = textBoxName.Text;
+                        item.Country = comboBoxCountry.Text;
+                        item.Km = int.Parse(textBoxKm.Text);
+                        item.Highest_Peak = int.Parse(textBoxPeak.Text);
+                        item.Longest_Slope = int.Parse(textBoxSlope.Text);
+                        item.Ski_Lifts = int.Parse(textBoxLifts.Text);
+                        item.Snowparks = int.Parse(textBoxSnowparks.Text);
+                        item.Skipass = int.Parse(textBoxSkipass.Text);
+                        if (checkBoxRink.IsChecked ?? false)
+                            item.Rink = 1;
+                        else
+                            item.Rink = 0;
+                        break;
+                    }
+                }
+
+                Log.Logir("Изменена информация о курорте " + textBoxName.Text + " " + DateTime.Now);
+
                 Serialization.Serialize(lr);
 
                 Admin wnd = new Admin();
                 wnd.Show();
                 Close();
             }
-        }
-
-        private void buttonBack_Click(object sender, RoutedEventArgs e)
-        {
-            Admin wnd = new Admin();
-            wnd.Show();
-            Close();
-        }
-
-        private void buttonPhoto_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "jpeg|*.jpg";
-            if (openFileDialog.ShowDialog() == true)
+            catch (Exception er)
             {
-                var fileN = openFileDialog.FileName;
-                var nPath = System.IO.Path.GetFileName(fileN);
-                var curPAth = System.Reflection.Assembly.GetExecutingAssembly().Location;
-                nPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(curPAth) + "/photo/", nPath);
-
-                File.Copy(fileN, nPath, true);
-                BitmapImage photo;
-                photo = new BitmapImage(new Uri(nPath));
-                textBoxPhoto.Text = nPath;
+                MessageBox.Show(er.ToString());
             }
-        }
 
-        private void buttonHotel_Click(object sender, RoutedEventArgs e)
-        {
-            AddHotel wnd = new AddHotel();
-            wnd.Show();
-        }
-
-        /*СОХРАНИТЬ */
-        private void buttonEdit_Click(object sender, RoutedEventArgs e)
-        {
-            if (File.Exists("../../allresorts.xml"))
-            {
-                lr = Serialization.Deserialize(lr);
-            }
-            foreach (var item in lr.Res)
-            {
-                if (ski.Name == item.Name)
-                {
-                    item.Name = textBoxName.Text;
-                    item.Country = comboBoxCountry.Text;
-                    item.Km = int.Parse(textBoxKm.Text);
-                    item.Highest_Peak = int.Parse(textBoxPeak.Text);
-                    item.Longest_Slope = int.Parse(textBoxSlope.Text);
-                    item.Ski_Lifts = int.Parse(textBoxLifts.Text);
-                    item.Snowparks = int.Parse(textBoxSnowparks.Text);
-                    item.Skipass = int.Parse(textBoxSkipass.Text);
-                    if (checkBoxRink.IsChecked ?? false)
-                        item.Rink = 1;
-                    else
-                        item.Rink = 0;
-                    break;
-                }
-            }
-            
-
-            Serialization.Serialize(lr);
-
-            Admin wnd = new Admin();
-            wnd.Show();
-            Close();
-
-           
         }
 
         private void buttonAllHotels_Click(object sender, RoutedEventArgs e)
         {
-
-
-            AddHotel wnd = new AddHotel();
-            wnd.Show();
-            wnd.ski3 = ski;
-
-            wnd.listViewHotels.Items.Clear();
-            foreach (var item in wnd.lr.Res)
+            try
             {
-                if (ski.Name == item.Name)
+                AddHotel wnd = new AddHotel();
+                wnd.Show();
+                wnd.ski3 = ski;
+
+                wnd.listViewHotels.Items.Clear();
+                foreach (var item in wnd.lr.Res)
                 {
-                    foreach (var h in item.Hotels)
+                    if (ski.Name == item.Name)
                     {
-                        wnd.listViewHotels.Items.Add(h.Name);
+                        foreach (var h in item.Hotels)
+                        {
+                            wnd.listViewHotels.Items.Add(h.Name);
+                        }
                     }
                 }
             }
-
+            catch (Exception er)
+            {
+                MessageBox.Show(er.ToString());
+            }
         }
     }
 }

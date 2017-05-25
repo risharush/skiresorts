@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
 using System.Xml.Serialization;
+using System.Text.RegularExpressions;
 
 namespace Ski_Resorts
 {
@@ -25,101 +26,156 @@ namespace Ski_Resorts
         public string file = "../../allresorts.xml";
         public Admin()
         {
-            InitializeComponent();
-
-
-            if (File.Exists("../../allresorts.xml"))
+            try
             {
-                listView.Items.Clear();
-                lr = Serialization.Deserialize(lr);
-                foreach (var item in lr.Res)
+                InitializeComponent();
+                if (File.Exists("../../allresorts.xml"))
                 {
-                    listView.Items.Add(item.Show());
+                    listView.Items.Clear();
+                    lr = Serialization.Deserialize(lr);
+                    foreach (var item in lr.Res)
+                    {
+                        listView.Items.Add(item.Show());
+                    }
                 }
             }
-
+            catch (Exception er)
+            {
+                MessageBox.Show(er.ToString());
+            }
         }
 
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
-            AdminAdd wnd = new AdminAdd();
-            wnd.Show();
-            this.Close();
-
-
-            //wnd.buttonHotel.Visibility = Visibility.Visible;
-            wnd.buttonAdd.Visibility = Visibility.Visible;
-            wnd.buttonAllHotels.Visibility = Visibility.Hidden;
-            wnd.buttonEdit.Visibility = Visibility.Hidden;
-
-        }
-
-        private void buttonBack_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow wnd = new MainWindow();
-            wnd.Show();
-            this.Close();
-        }
-
-        private void buttonEdit_Click(object sender, RoutedEventArgs e)
-        {
-            if (listView.SelectedItem != null)
+            try
             {
                 AdminAdd wnd = new AdminAdd();
                 wnd.Show();
                 this.Close();
-             
-                foreach (var item in lr.Res)
-                {
 
-                    if (listView.SelectedItem.ToString() == item.Show())
-                    {
-                        wnd.textBoxName.Text = item.Name;
-                        wnd.comboBoxCountry.Text = item.Country;
-                        wnd.textBoxKm.Text = item.Km.ToString();
-                        wnd.textBoxPeak.Text = item.Highest_Peak.ToString();
-                        wnd.textBoxSlope.Text = item.Longest_Slope.ToString();
-                        wnd.textBoxLifts.Text = item.Ski_Lifts.ToString();
-                        wnd.textBoxSnowparks.Text = item.Snowparks.ToString();
-                        wnd.textBoxSkipass.Text = item.Skipass.ToString();
-                        if (item.Rink == 1)
-                        wnd.checkBoxRink.IsChecked= true;
-                        wnd.ski = item;
-                    }
-                }
-                wnd.buttonAllHotels.Visibility = Visibility.Visible;
-                wnd.buttonEdit.Visibility = Visibility.Visible;
-                //wnd.buttonHotel.Visibility = Visibility.Hidden;
-                wnd.buttonAdd.Visibility = Visibility.Hidden;
+
+                //wnd.buttonHotel.Visibility = Visibility.Visible;
+                wnd.buttonAdd.Visibility = Visibility.Visible;
+                wnd.buttonAllHotels.Visibility = Visibility.Hidden;
+                wnd.buttonEdit.Visibility = Visibility.Hidden;
             }
-            else
+            catch (Exception er)
             {
-                MessageBox.Show("Выберите курорт!", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(er.ToString());
+            }
+        }
+
+        private void buttonBack_Click(object sender, RoutedEventArgs e)
+        {
+                MainWindow wnd = new MainWindow();
+                wnd.Show();
+                this.Close();
+        }
+
+        private void buttonEdit_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (listView.SelectedItem != null)
+                {
+                    AdminAdd wnd = new AdminAdd();
+                    wnd.Show();
+                    this.Close();
+
+                    foreach (var item in lr.Res)
+                    {
+
+                        if (listView.SelectedItem.ToString() == item.Show())
+                        {
+                            wnd.textBoxName.Text = item.Name;
+                            wnd.comboBoxCountry.Text = item.Country;
+                            wnd.textBoxKm.Text = item.Km.ToString();
+                            wnd.textBoxPeak.Text = item.Highest_Peak.ToString();
+                            wnd.textBoxSlope.Text = item.Longest_Slope.ToString();
+                            wnd.textBoxLifts.Text = item.Ski_Lifts.ToString();
+                            wnd.textBoxSnowparks.Text = item.Snowparks.ToString();
+                            wnd.textBoxSkipass.Text = item.Skipass.ToString();
+                            wnd.textBoxPhoto.Text = item.Photo.ToString();
+                            if (item.Rink == 1)
+                                wnd.checkBoxRink.IsChecked = true;
+                            wnd.ski = item;
+                        }
+                    }
+                    wnd.buttonAllHotels.Visibility = Visibility.Visible;
+                    wnd.buttonEdit.Visibility = Visibility.Visible;
+                    //wnd.buttonHotel.Visibility = Visibility.Hidden;
+                    wnd.buttonAdd.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    MessageBox.Show("Выберите курорт!", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.ToString());
             }
         }
 
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
-            if (listView.SelectedItem != null)
+            try
             {
-                foreach (var item in lr.Res)
+                if (listView.SelectedItem != null)
                 {
-                    if (item.Show() == listView.SelectedItem.ToString())
+                    foreach (var item in lr.Res)
                     {
-                        lr.Res.Remove(item);
-                        break;
+                        if (item.Show() == listView.SelectedItem.ToString())
+                        {
+                            Log.Logir("Удалён курорт " + item.Name + " " + DateTime.Now);
+                            lr.Res.Remove(item);
+                            break;
+                        }
+                    }
+                    listView.Items.Clear();
+                    foreach (var item in lr.Res)
+                    {
+                        listView.Items.Add(item.Show());
+                    }
+                    Serialization.Serialize(lr);
+                }
+                else
+                {
+                    MessageBox.Show("Выберите курорт!", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.ToString());
+            }
+        }
+
+        private void textBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                if (textBoxSearch.Text != "")
+                {
+                    listView.Items.Clear();
+                    foreach (var item in lr.Res)
+                    {
+                        if (item.Name.ToLower().StartsWith(textBoxSearch.Text) || item.Name.ToUpper().StartsWith(textBoxSearch.Text) || item.Country.ToLower().StartsWith(textBoxSearch.Text) || item.Country.ToUpper().StartsWith(textBoxSearch.Text))
+                        {
+                            listView.Items.Add(item.Show());
+                        }
                     }
                 }
-                listView.Items.Clear();
-                foreach (var item in lr.Res)
+                else
                 {
-                    listView.Items.Add(item.Show());
+                    foreach (var item in lr.Res)
+                    {
+                        listView.Items.Add(item.Show());
+                    }
                 }
-                Serialization.Serialize(lr);
             }
-            else
+            catch (Exception er)
             {
-                MessageBox.Show("Выберите курорт!", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(er.ToString());
             }
         }
     }

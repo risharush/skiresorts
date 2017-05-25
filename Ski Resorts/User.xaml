@@ -31,16 +31,54 @@
             <TextBlock>Германия</TextBlock>
             <TextBlock>Испания</TextBlock>
             <TextBlock>Италия</TextBlock>
-            <TextBlock>Россия</TextBlock>
-            <TextBlock>Норвегия</TextBlock>
-            <TextBlock>Финляндия</TextBlock>
             <TextBlock>Франция</TextBlock>
             <TextBlock>Швейцария</TextBlock>
         </ComboBox>
-        <Slider x:Name="sliderKm" Margin="5" IsSnapToTickEnabled="True" Grid.Row="3" Grid.Column="2" Minimum="0" Maximum="600" TickPlacement="BottomRight" Ticks="0,50,100,200,300,400,500,600"/>
-        <Slider x:Name="sliderSkipass" Margin="5" IsSnapToTickEnabled="True" Grid.Row="5" Grid.Column="2" Minimum="200" Maximum="500" TickPlacement="BottomRight" Ticks="200,300,400,500" Value="500"/>
+        <Slider x:Name="sliderKm" Margin="5" IsSnapToTickEnabled="True" Grid.Row="3" Grid.Column="2" Minimum="0" Maximum="300" TickPlacement="BottomRight" Ticks="0,50,100,150,200,250,300"/>
+        <Slider x:Name="sliderSkipass" Margin="5" IsSnapToTickEnabled="True" Grid.Row="5" Grid.Column="2" Minimum="200" Maximum="400" TickPlacement="BottomRight" Ticks="200,250,300,350" Value="500"/>
         <Label x:Name="label" Content="Поможем выбрать горнолыжный курорт по вкусу!" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.RowSpan="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="21.333,1,20.667,1"/>
-        <Image x:Name="image" Source="C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/alps.jpg" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Center" Grid.RowSpan="3" VerticalAlignment="Center" Margin="30"/>
+        <!--<Image x:Name="image" Source="горы1.jpg" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Center" Grid.RowSpan="3" VerticalAlignment="Center" Margin="30">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="image" Storyboard.TargetProperty="(UIElement.Opacity)" From="0" To="1" BeginTime="0:0:20" Duration="0:0:10" AutoReverse="True" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>-->
+
+        <Image x:Name="image3" Source="горы4.jpg" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Center" Grid.RowSpan="3" VerticalAlignment="Center" Margin="30">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="image3" Storyboard.TargetProperty="(UIElement.Opacity)" From="0" To="1" BeginTime="0:0:0" Duration="0:0:10" AutoReverse="True" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+
+        <Image x:Name="image2" Source="горы1.jpg" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Center" Grid.RowSpan="3" VerticalAlignment="Center" Margin="30">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="image2" Storyboard.TargetProperty="(UIElement.Opacity)" From="1" To="0" BeginTime="0:0:0" Duration="0:0:10" AutoReverse="True" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        
         <TextBlock x:Name="textBlock" FontSize="15" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="Выберите страну:" Margin="10"/>
         <TextBlock x:Name="textBlock1" FontSize="15" Grid.Column="2" Grid.Row="2" TextWrapping="Wrap" Text="Километраж трасс от           км" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBlock x:Name="textBlock2" FontSize="15" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" Text="Цена скипасса на неделю до           €" VerticalAlignment="Center"/>

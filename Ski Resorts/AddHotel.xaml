@@ -36,19 +36,21 @@
         <TextBox x:Name="textBoxKm" FontSize="18" Margin="15" Grid.Row="3" TextWrapping="Wrap"/>
         <CheckBox x:Name="checkBoxWifi" Grid.Column="1" Margin="107, 24" Grid.Row="3"/>
         <CheckBox x:Name="checkBoxSauna" Grid.Column="2" Margin="107, 24" Grid.Row="3"/>
-        <TextBox x:Name="textBoxPhoto1" FontSize="12" Text="C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/" Margin="15" Grid.Row="4" TextWrapping="Wrap" Grid.Column="1" Grid.ColumnSpan="1"/>
-        <TextBox x:Name="textBoxPhoto2" FontSize="12" Text="C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/" Margin="15" Grid.Row="5" TextWrapping="Wrap" Grid.Column="1" Grid.ColumnSpan="1"/>
+        <TextBox x:Name="textBoxPhoto1" FontSize="12" Margin="15" Grid.Row="4" TextWrapping="Wrap" Grid.Column="1" Grid.ColumnSpan="1"/>
+        <TextBox x:Name="textBoxPhoto2" FontSize="12" Margin="15" Grid.Row="5" TextWrapping="Wrap" Grid.Column="1" Grid.ColumnSpan="1"/>
         <Button x:Name="buttonAdd" Content="Добавить" FontSize="21" Grid.Column="2" Margin="15" Grid.Row="7" Click="buttonAdd_Click"/>
-        <Button x:Name="buttonSave" Content="Сохранить" Visibility="Hidden" FontSize="21" Grid.Column="2" Margin="15" Grid.Row="7"/>
+        <Button x:Name="buttonSave" Content="Сохранить" Visibility="Hidden" FontSize="21" Grid.Column="2" Margin="15" Grid.Row="7" Click="buttonSave_Click"/>
         <Button x:Name="buttonBack" Content="Назад" FontSize="21" Grid.Column="1" Margin="15" Grid.Row="7" Click="buttonBack_Click"/>
-        <Button x:Name="buttonPhoto1" Content="Выбрать фото" FontSize="21" Grid.Column="2" Margin="15" Grid.Row="4"/>
-        <Button x:Name="buttonPhoto2" Content="Выбрать фото" FontSize="21" Grid.Column="2" Margin="15" Grid.Row="5"/>
-        <ListView x:Name="listViewHotels" Margin="15" Grid.Row="6" Grid.RowSpan="2">
+        <Button x:Name="buttonPhoto1" Content="Выбрать фото" FontSize="21" Grid.Column="2" Margin="15" Grid.Row="4" Click="buttonPhoto1_Click"/>
+        <Button x:Name="buttonPhoto2" Content="Выбрать фото" FontSize="21" Grid.Column="2" Margin="15" Grid.Row="5" Click="buttonPhoto2_Click"/>
+        <ListView x:Name="listViewHotels" Margin="15" Grid.Row="6" Grid.RowSpan="2" SelectionChanged="listViewHotels_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="buttonChange" Visibility="Hidden" FontSize="21" Content="Режим добавления" Grid.Column="2" Margin="15" Grid.Row="6" Click="buttonChange_Click"/>
+        <Button x:Name="buttonDelete" Content="Удалить" Visibility="Hidden" FontSize="21" Grid.Column="1" Margin="15" Grid.Row="6" Click="buttonDelete_Click"/>
     </Grid>
 </Window>

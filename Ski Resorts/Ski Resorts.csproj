@@ -64,11 +64,15 @@
     <Compile Include="AdminAdd.xaml.cs">
       <DependentUpon>AdminAdd.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Booking.xaml.cs">
+      <DependentUpon>Booking.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Hotel.cs" />
     <Compile Include="Hotels.xaml.cs">
       <DependentUpon>Hotels.xaml</DependentUpon>
     </Compile>
     <Compile Include="ListOfResorts.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="Password.xaml.cs">
       <DependentUpon>Password.xaml</DependentUpon>
     </Compile>
@@ -92,6 +96,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AdminAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Booking.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,6 +162,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="альпы.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="горы.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="горы1.jpg" />
+    <Resource Include="горы2.jpg" />
+    <Resource Include="горы3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="горы4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="горы5.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

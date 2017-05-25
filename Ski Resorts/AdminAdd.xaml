@@ -31,7 +31,7 @@
         <Label x:Name="label6" Content="Сноупарки" FontSize="21" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Grid.Row="4"/>
         <Label x:Name="label7" Content="Хелиски" FontSize="21" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Grid.Row="4"/>
         <Label x:Name="label8" Content="Скипасс" FontSize="21" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Grid.Row="4"/>
-        <Label x:Name="label9" Content="Ссылка на фото:" FontSize="21" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Grid.Row="6"/>
+        <Label x:Name="label9" Content="Фото:" FontSize="21" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Grid.Row="6"/>
         <TextBox x:Name="textBoxName" FontSize="18" Margin="15" Grid.Row="1"/>
         <ComboBox x:Name="comboBoxCountry" FontSize="18" Grid.Column="1" Margin="15" Grid.Row="1">
             <TextBlock>Австрия</TextBlock>
@@ -39,9 +39,6 @@
             <TextBlock>Германия</TextBlock>
             <TextBlock>Испания</TextBlock>
             <TextBlock>Италия</TextBlock>
-            <TextBlock>Россия</TextBlock>
-            <TextBlock>Норвегия</TextBlock>
-            <TextBlock>Финляндия</TextBlock>
             <TextBlock>Франция</TextBlock>
             <TextBlock>Швейцария</TextBlock>
         </ComboBox>
@@ -52,7 +49,7 @@
         <TextBox x:Name="textBoxSnowparks" FontSize="18" Margin="15" Grid.Row="5" TextWrapping="Wrap"/>
         <CheckBox x:Name="checkBoxRink" Grid.Column="1" Margin="107, 24" Grid.Row="5"/>
         <TextBox x:Name="textBoxSkipass" FontSize="18" Grid.Column="2" Margin="15" Grid.Row="5" TextWrapping="Wrap"/>
-        <TextBox x:Name="textBoxPhoto" FontSize="12" Text="C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/" Margin="15" Grid.Row="6" TextWrapping="Wrap" Grid.Column="1" Grid.ColumnSpan="1"/>
+        <TextBox x:Name="textBoxPhoto" FontSize="12" Margin="15" Grid.Row="6" TextWrapping="Wrap" Grid.Column="1" Grid.ColumnSpan="1"/>
         <Button x:Name="buttonPhoto" Content="Выбрать фото" FontSize="21" Grid.Column="2" Margin="15" Grid.Row="6" Click="buttonPhoto_Click"/>
 
 

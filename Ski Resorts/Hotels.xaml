@@ -5,24 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ski_Resorts"
         mc:Ignorable="d"
-        Title="Hotels" Height="550" Width="700">
+        Title="Hotels" Height="550" Width="700" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="232*"/>
-            <RowDefinition Height="223*"/>
-            <RowDefinition Height="66*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ListView x:Name="listView" Margin="0" Grid.RowSpan="2">
+        <ListView x:Name="listViewHotels" FontSize="21" Margin="15,15,15.333,0.333" Grid.RowSpan="4" SelectionChanged="listViewHotels_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="buttonBack" Content="Назад" FontSize="22" Margin="15" Grid.Row="4" Click="buttonBack_Click"/>
+        <Image x:Name="image1" Margin="0,0,15,0" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" Grid.RowSpan="1">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="image1" Storyboard.TargetProperty="(UIElement.Opacity)" From="1" To="0" BeginTime="0:0:0" Duration="0:0:5" AutoReverse="True" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <Image x:Name="image2" Margin="0,0,15,0" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" Grid.RowSpan="1">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="image2" Storyboard.TargetProperty="(UIElement.Opacity)" From="0" To="1" BeginTime="0:0:0" Duration="0:0:5" AutoReverse="True" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <Label x:Name="labelName" Content="" FontSize="21" Grid.Column="1" Margin="10"/>
+        <Label x:Name="labelRes" Visibility="Hidden" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="28.667,23.667,0,0" Grid.Row="4" VerticalAlignment="Top"/>
+        <Label x:Name="labelPrice" Content="" FontSize="20" Grid.Column="1" Margin="0, 5" Grid.Row="2"/>
+        <Label x:Name="labelPeople" Content="" FontSize="20" Grid.Column="2" Margin="0, 5" Grid.Row="2"/>
+        <Label x:Name="labelKm" Content="" FontSize="20" Grid.Column="1" Margin="0, 5" Grid.Row="3"/>
+        <Label x:Name="labelWifiSauna" Content="" FontSize="20" Grid.Column="2" Margin="0, 5" Grid.Row="3"/>
+        <Button x:Name="buttonPrev" Visibility="Hidden" FontSize="18" Content="Предыдущий" Grid.Column="1" Margin="15, 15, 100, 15" Grid.Row="4" Click="buttonPrev_Click"/>
+        <Button x:Name="buttonNext" Visibility="Hidden" FontSize="18"  Content="Следующий" Grid.Column="2" Margin="100, 15, 15, 15" Grid.Row="4" Click="buttonNext_Click"/>
+        <Button x:Name="buttonBook" Visibility="Hidden" Grid.ColumnSpan="2" FontSize="18" Content="Забронировать" Grid.Column="1" Margin="150,15" Grid.Row="4" Click="buttonBook_Click"/>
 
     </Grid>
 </Window>

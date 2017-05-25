@@ -22,19 +22,29 @@ namespace Ski_Resorts
         public Password()
         {
             InitializeComponent();
+            passwordBox.Focus();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            if (passwordBox.Password.ToString()=="12345")
+            try
             {
-                Admin wnd = new Admin();
-                wnd.Show();
-                this.Close();
+                if (passwordBox.Password.ToString() == "12345")
+                {
+                    Log.Logir("Вход администратора " + DateTime.Now);
+                    Admin wnd = new Admin();
+                    wnd.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Неверный пароль!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Log.Logir("Произведена попытка входа " + DateTime.Now);
+                }
             }
-            else
+            catch (Exception er)
             {
-                MessageBox.Show("Неверный пароль!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(er.ToString());
             }
         }
     }

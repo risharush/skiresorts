@@ -29,6 +29,7 @@
         <Label x:Name="labelSlope" FontSize="18" Content="" Margin="10,0" Grid.Row="4"/>
         <Label x:Name="labelSkipass" FontSize="18" Content="" Margin="10,0" Grid.Row="4" Grid.Column="1"/>
         <Button x:Name="buttonHotel" FontSize="18" Content="Посмотреть рекомендации по отелям" Margin="10" Grid.Row="5" Grid.Column="1" Click="buttonHotel_Click"/>
+        <Button x:Name="buttonBack" FontSize="18" Content="Назад" Margin="10, 10, 200, 10" Grid.Row="5" Click="buttonBack_Click"/>
 
     </Grid>
 </Window>

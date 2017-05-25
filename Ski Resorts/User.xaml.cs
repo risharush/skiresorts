@@ -38,26 +38,40 @@ namespace Ski_Resorts
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            UserList wnd = new UserList();
-            wnd.Show();
-            Close();
-
-            foreach (Ski_Resort item in lr.Res)
+            try
             {
-                int snow = 0;
-                if (checkBoxSnowpark.IsChecked ?? false)
+                UserList wnd = new UserList();
+                wnd.Show();
+                Close();
+
+                int f = 0;
+                foreach (Ski_Resort item in lr.Res)
                 {
-                    snow = 1;
+                    int snow = 0;
+                    if (checkBoxSnowpark.IsChecked ?? false)
+                    {
+                        snow = 1;
+                    }
+                    int rink = 0;
+                    if (checkBoxRink.IsChecked ?? false)
+                    {
+                        rink = 1;
+                    }
+                    if ((comboBoxCountry.Text == item.Country || comboBoxCountry.Text == "Любая") && (snow == 1 && item.Snowparks >= 1 || snow == 0) && (rink == 1 && item.Rink == 1 || rink == 0) && (int.Parse(textBoxKm.Text) <= item.Km) && (int.Parse(textBoxSkipass.Text) >= item.Skipass))
+                    {
+                        wnd.listViewResorts.Items.Add(item.Name + ' ' + item.Country);
+                        f++;
+                    }
                 }
-                int rink = 0;
-                if (checkBoxRink.IsChecked ?? false)
+                if (f == 0)
                 {
-                    rink = 1;
+                    wnd.listViewResorts.Items.Add("По вашему запросу\nничего не найдено!");
+                    wnd.button1.Visibility = Visibility.Hidden;
                 }
-                if ((comboBoxCountry.Text == item.Country || comboBoxCountry.Text == "Любая") && (snow == 1 && item.Snowparks >= 1 || snow == 0) && (rink == 1 && item.Rink == 1 || rink == 0) && (int.Parse(textBoxKm.Text) <= item.Km) && (int.Parse(textBoxSkipass.Text) >= item.Skipass))
-                {
-                    wnd.listViewResorts.Items.Add(item.Name + ' ' + item.Country);
-                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.ToString());
             }
         }
     }

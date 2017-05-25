@@ -2,68 +2,396 @@
 <ListOfResorts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Res>
     <Ski_Resort>
-      <Name>iuhih</Name>
-      <Country>Андорра</Country>
-      <Highest_Peak>789</Highest_Peak>
-      <Km>765</Km>
-      <Longest_Slope>87</Longest_Slope>
-      <Ski_Lifts>787</Ski_Lifts>
-      <Snowparks>9</Snowparks>
+      <Name>Бад_Гастайн</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>2686</Highest_Peak>
+      <Km>220</Km>
+      <Longest_Slope>11</Longest_Slope>
+      <Ski_Lifts>50</Ski_Lifts>
+      <Snowparks>0</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>278</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/бад гастайн.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Бад_Хофгастайн</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>2300</Highest_Peak>
+      <Km>87</Km>
+      <Longest_Slope>7</Longest_Slope>
+      <Ski_Lifts>19</Ski_Lifts>
+      <Snowparks>1</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>278</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/бад хофгастайн.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Вестендорф</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>1957</Highest_Peak>
+      <Km>280</Km>
+      <Longest_Slope>8</Longest_Slope>
+      <Ski_Lifts>91</Ski_Lifts>
+      <Snowparks>4</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>262</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/вестендорф.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Заальбах-Хинтерглемм</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>2098</Highest_Peak>
+      <Km>200</Km>
+      <Longest_Slope>8</Longest_Slope>
+      <Ski_Lifts>70</Ski_Lifts>
+      <Snowparks>3</Snowparks>
       <Rink>1</Rink>
-      <Skipass>765</Skipass>
+      <Skipass>266</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/заальбах.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Зёльден</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>3340</Highest_Peak>
+      <Km>145</Km>
+      <Longest_Slope>15</Longest_Slope>
+      <Ski_Lifts>34</Ski_Lifts>
+      <Snowparks>2</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>299</Skipass>
       <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/зёльден.jpg</Photo>
       <Hotels>
         <Hotel>
-          <Name>Роза</Name>
-          <Price>100</Price>
-          <People>2</People>
-          <Km>4</Km>
+          <Name>Zolden_Central</Name>
+          <Price>1500</Price>
+          <People>4</People>
+          <Km>2</Km>
           <Wifi>1</Wifi>
-          <Sauna>1</Sauna>
-          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo1>
-          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo2>
-        </Hotel>
-        <Hotel>
-          <Name>Винегрет</Name>
-          <Price>100</Price>
-          <People>2</People>
-          <Km>4</Km>
-          <Wifi>1</Wifi>
-          <Sauna>1</Sauna>
-          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo1>
-          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo2>
-        </Hotel>
-        <Hotel>
-          <Name>Ромашка</Name>
-          <Price>57</Price>
-          <People>5</People>
-          <Km>10</Km>
-          <Wifi>1</Wifi>
-          <Sauna>1</Sauna>
-          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo1>
-          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo2>
-        </Hotel>
-        <Hotel>
-          <Name>Маргаритка</Name>
-          <Price>33</Price>
-          <People>1</People>
-          <Km>15</Km>
-          <Wifi>0</Wifi>
           <Sauna>0</Sauna>
-          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo1>
-          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo2>
+          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/1.jpg</Photo1>
+          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/17.jpg</Photo2>
         </Hotel>
         <Hotel>
-          <Name>сериаЛИЗАВАЛИ</Name>
-          <Price>57</Price>
+          <Name>Winter_Beauty</Name>
+          <Price>1700</Price>
           <People>2</People>
-          <Km>3</Km>
+          <Km>1</Km>
           <Wifi>1</Wifi>
           <Sauna>1</Sauna>
-          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo1>
-          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\фото/</Photo2>
+          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/3.jpg</Photo1>
+          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/9.jpg</Photo2>
+        </Hotel>
+        <Hotel>
+          <Name>Fairytale</Name>
+          <Price>2000</Price>
+          <People>5</People>
+          <Km>3</Km>
+          <Wifi>0</Wifi>
+          <Sauna>1</Sauna>
+          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/4.jpg</Photo1>
+          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/48.jpg</Photo2>
+        </Hotel>
+        <Hotel>
+          <Name>Romance</Name>
+          <Price>1600</Price>
+          <People>2</People>
+          <Km>1</Km>
+          <Wifi>1</Wifi>
+          <Sauna>1</Sauna>
+          <Photo1>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/13.jpg</Photo1>
+          <Photo2>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/22.jpg</Photo2>
         </Hotel>
       </Hotels>
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Имст</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>2100</Highest_Peak>
+      <Km>9</Km>
+      <Longest_Slope>2</Longest_Slope>
+      <Ski_Lifts>4</Ski_Lifts>
+      <Snowparks>1</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>155</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/имст.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Инсбрук</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>3210</Highest_Peak>
+      <Km>270</Km>
+      <Longest_Slope>10</Longest_Slope>
+      <Ski_Lifts>67</Ski_Lifts>
+      <Snowparks>4</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>238</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/инсбрук.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Капрун</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>3030</Highest_Peak>
+      <Km>139</Km>
+      <Longest_Slope>7</Longest_Slope>
+      <Ski_Lifts>46</Ski_Lifts>
+      <Snowparks>3</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>270</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/капрун.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Лех</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>2450</Highest_Peak>
+      <Km>110</Km>
+      <Longest_Slope>5</Longest_Slope>
+      <Ski_Lifts>97</Ski_Lifts>
+      <Snowparks>2</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>295</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/лех.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Майрхофен</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>2500</Highest_Peak>
+      <Km>136</Km>
+      <Longest_Slope>10</Longest_Slope>
+      <Ski_Lifts>57</Ski_Lifts>
+      <Snowparks>3</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>275</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/майрхофен.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Монтафон</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>2380</Highest_Peak>
+      <Km>232</Km>
+      <Longest_Slope>14</Longest_Slope>
+      <Ski_Lifts>61</Ski_Lifts>
+      <Snowparks>4</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>262</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/монтафон.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Серфаус-Фисс-Ладис</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>2820</Highest_Peak>
+      <Km>214</Km>
+      <Longest_Slope>10</Longest_Slope>
+      <Ski_Lifts>68</Ski_Lifts>
+      <Snowparks>9</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>264</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/серфаус.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Хопфгартен</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>1957</Highest_Peak>
+      <Km>287</Km>
+      <Longest_Slope>10</Longest_Slope>
+      <Ski_Lifts>90</Ski_Lifts>
+      <Snowparks>4</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>262</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/хопфгартен.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Цюрс</Name>
+      <Country>Австрия</Country>
+      <Highest_Peak>2450</Highest_Peak>
+      <Km>210</Km>
+      <Longest_Slope>5</Longest_Slope>
+      <Ski_Lifts>86</Ski_Lifts>
+      <Snowparks>2</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>284</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/цюрс.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Сьерра-Невада</Name>
+      <Country>Испания</Country>
+      <Highest_Peak>3300</Highest_Peak>
+      <Km>105</Km>
+      <Longest_Slope>6</Longest_Slope>
+      <Ski_Lifts>22</Ski_Lifts>
+      <Snowparks>3</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>235</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/сьерра-невада.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Бакейра-Берет</Name>
+      <Country>Испания</Country>
+      <Highest_Peak>2510</Highest_Peak>
+      <Km>155</Km>
+      <Longest_Slope>4</Longest_Slope>
+      <Ski_Lifts>27</Ski_Lifts>
+      <Snowparks>1</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>260</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/бакейра-берет.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Формигаль-Пантикоса</Name>
+      <Country>Испания</Country>
+      <Highest_Peak>2250</Highest_Peak>
+      <Km>176</Km>
+      <Longest_Slope>6</Longest_Slope>
+      <Ski_Lifts>37</Ski_Lifts>
+      <Snowparks>0</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>279</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/формигаль-пантикоса.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Грандвалира</Name>
+      <Country>Андорра</Country>
+      <Highest_Peak>2640</Highest_Peak>
+      <Km>210</Km>
+      <Longest_Slope>6</Longest_Slope>
+      <Ski_Lifts>59</Ski_Lifts>
+      <Snowparks>3</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>290</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/грандвалира.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Энкамп</Name>
+      <Country>Андорра</Country>
+      <Highest_Peak>2640</Highest_Peak>
+      <Km>210</Km>
+      <Longest_Slope>6</Longest_Slope>
+      <Ski_Lifts>59</Ski_Lifts>
+      <Snowparks>3</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>290</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/энкамп.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Сольдеу</Name>
+      <Country>Андорра</Country>
+      <Highest_Peak>2560</Highest_Peak>
+      <Km>210</Km>
+      <Longest_Slope>8</Longest_Slope>
+      <Ski_Lifts>52</Ski_Lifts>
+      <Snowparks>4</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>245</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/энкамп.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Гармиш-Партенкирхен</Name>
+      <Country>Германия</Country>
+      <Highest_Peak>2050</Highest_Peak>
+      <Km>120</Km>
+      <Longest_Slope>5</Longest_Slope>
+      <Ski_Lifts>46</Ski_Lifts>
+      <Snowparks>0</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>262</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/гармиш.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Валь_Гардена</Name>
+      <Country>Италия</Country>
+      <Highest_Peak>2515</Highest_Peak>
+      <Km>175</Km>
+      <Longest_Slope>8</Longest_Slope>
+      <Ski_Lifts>83</Ski_Lifts>
+      <Snowparks>1</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>280</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/вальгардена.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Валле_Даоста</Name>
+      <Country>Италия</Country>
+      <Highest_Peak>3899</Highest_Peak>
+      <Km>903</Km>
+      <Longest_Slope>15</Longest_Slope>
+      <Ski_Lifts>182</Ski_Lifts>
+      <Snowparks>10</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>313</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/валле.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Сестриере</Name>
+      <Country>Италия</Country>
+      <Highest_Peak>2840</Highest_Peak>
+      <Km>400</Km>
+      <Longest_Slope>7</Longest_Slope>
+      <Ski_Lifts>62</Ski_Lifts>
+      <Snowparks>1</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>222</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/сестриере.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Валь_Торанс</Name>
+      <Country>Франция</Country>
+      <Highest_Peak>3230</Highest_Peak>
+      <Km>600</Km>
+      <Longest_Slope>2</Longest_Slope>
+      <Ski_Lifts>33</Ski_Lifts>
+      <Snowparks>1</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>274</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/вальторанс.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Мерибель</Name>
+      <Country>Франция</Country>
+      <Highest_Peak>2952</Highest_Peak>
+      <Km>600</Km>
+      <Longest_Slope>5</Longest_Slope>
+      <Ski_Lifts>60</Ski_Lifts>
+      <Snowparks>1</Snowparks>
+      <Rink>1</Rink>
+      <Skipass>294</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/мерибель.jpg</Photo>
+      <Hotels />
+    </Ski_Resort>
+    <Ski_Resort>
+      <Name>Шампери</Name>
+      <Country>Швейцария</Country>
+      <Highest_Peak>2300</Highest_Peak>
+      <Km>650</Km>
+      <Longest_Slope>15</Longest_Slope>
+      <Ski_Lifts>37</Ski_Lifts>
+      <Snowparks>1</Snowparks>
+      <Rink>0</Rink>
+      <Skipass>247</Skipass>
+      <Photo>C:\Users\Арина\Desktop\кдз по проге\Ski Resorts\Ski Resorts\bin\Debug/photo/шампери.jpg</Photo>
+      <Hotels />
     </Ski_Resort>
   </Res>
 </ListOfResorts>
